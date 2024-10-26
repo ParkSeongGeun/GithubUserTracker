@@ -109,7 +109,7 @@ public final class UserListViewModel: UserListViewModelProtocol {
         
         return Output(
             cellData: cellData,
-            error: error.asObservable()
+            error: error.asObservable().observe(on: MainScheduler.instance)
         )
     }
     
