@@ -19,6 +19,8 @@
 		80DC95572CCCA649002A932C /* UserListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95562CCCA649002A932C /* UserListItem.swift */; };
 		80DC95592CCCA718002A932C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95582CCCA718002A932C /* NetworkError.swift */; };
 		80DC955B2CCCA8BF002A932C /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC955A2CCCA8BF002A932C /* CoreDataError.swift */; };
+		80DC955D2CCCAF1C002A932C /* UserListUsecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC955C2CCCAF1C002A932C /* UserListUsecaseProtocol.swift */; };
+		80DC95602CCCB096002A932C /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC955F2CCCB096002A932C /* UserRepositoryProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		80DC95562CCCA649002A932C /* UserListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListItem.swift; sourceTree = "<group>"; };
 		80DC95582CCCA718002A932C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		80DC955A2CCCA8BF002A932C /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		80DC955C2CCCAF1C002A932C /* UserListUsecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUsecaseProtocol.swift; sourceTree = "<group>"; };
+		80DC955F2CCCB096002A932C /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		80DC95512CCCA615002A932C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				80DC955E2CCCB082002A932C /* RepositoryProtocol */,
 				80DC95522CCCA622002A932C /* Usecase */,
 				80DC95532CCCA62A002A932C /* Entity */,
 			);
@@ -146,6 +151,7 @@
 		80DC95522CCCA622002A932C /* Usecase */ = {
 			isa = PBXGroup;
 			children = (
+				80DC955C2CCCAF1C002A932C /* UserListUsecaseProtocol.swift */,
 			);
 			path = Usecase;
 			sourceTree = "<group>";
@@ -158,6 +164,14 @@
 				80DC955A2CCCA8BF002A932C /* CoreDataError.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		80DC955E2CCCB082002A932C /* RepositoryProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				80DC955F2CCCB096002A932C /* UserRepositoryProtocol.swift */,
+			);
+			path = RepositoryProtocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +312,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DC95602CCCB096002A932C /* UserRepositoryProtocol.swift in Sources */,
 				80DC95422CCBDAAD002A932C /* AppDelegate.swift in Sources */,
 				80DC95432CCBDAAD002A932C /* SceneDelegate.swift in Sources */,
+				80DC955D2CCCAF1C002A932C /* UserListUsecaseProtocol.swift in Sources */,
 				80DC95442CCBDAAD002A932C /* ViewController.swift in Sources */,
 				80DC95572CCCA649002A932C /* UserListItem.swift in Sources */,
 				80DC95592CCCA718002A932C /* NetworkError.swift in Sources */,
