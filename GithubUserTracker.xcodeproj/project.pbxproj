@@ -30,6 +30,7 @@
 		80DC95712CCCC00B002A932C /* GithubUserTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80DC956F2CCCC00B002A932C /* GithubUserTracker.xcdatamodeld */; };
 		80DC95732CCCC150002A932C /* UserCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95722CCCC150002A932C /* UserCoreData.swift */; };
 		80DC95762CCCCCF8002A932C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95752CCCCCF8002A932C /* UserRepository.swift */; };
+		80DC95792CCCD1A7002A932C /* MockUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95782CCCD1A7002A932C /* MockUserRepository.swift */; };
 		F2DE44EE9B54FADA46FA5DA2 /* Pods_GithubUserTracker_GithubUserTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296A8A3AC71F48E1E427136A /* Pods_GithubUserTracker_GithubUserTrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		80DC95702CCCC00B002A932C /* GithubUserTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GithubUserTracker.xcdatamodel; sourceTree = "<group>"; };
 		80DC95722CCCC150002A932C /* UserCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoreData.swift; sourceTree = "<group>"; };
 		80DC95752CCCCCF8002A932C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		80DC95782CCCD1A7002A932C /* MockUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUserRepository.swift; sourceTree = "<group>"; };
 		92404DD63E7EC0724798A663 /* Pods_GithubUserTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubUserTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7EF4CF6369037251B065FA /* Pods-GithubUserTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUserTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubUserTrackerTests/Pods-GithubUserTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB2164702C0D47535E835ECF /* Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubUserTracker-GithubUserTrackerUITests/Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		80DC954A2CCBDAAF002A932C /* GithubUserTrackerTests */ = {
 			isa = PBXGroup;
 			children = (
+				80DC95772CCCD172002A932C /* Mock */,
 				80DC95492CCBDAAF002A932C /* GithubUserTrackerTests.swift */,
 			);
 			path = GithubUserTrackerTests;
@@ -250,6 +253,14 @@
 			children = (
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		80DC95772CCCD172002A932C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				80DC95782CCCD1A7002A932C /* MockUserRepository.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		D81B00B26DD54E85F3D3A7B6 /* Frameworks */ = {
@@ -536,6 +547,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DC95792CCCD1A7002A932C /* MockUserRepository.swift in Sources */,
 				80DC954B2CCBDAAF002A932C /* GithubUserTrackerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
