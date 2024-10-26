@@ -29,6 +29,7 @@
 		80DC956E2CCCBECB002A932C /* UserNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC956D2CCCBECB002A932C /* UserNetwork.swift */; };
 		80DC95712CCCC00B002A932C /* GithubUserTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 80DC956F2CCCC00B002A932C /* GithubUserTracker.xcdatamodeld */; };
 		80DC95732CCCC150002A932C /* UserCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95722CCCC150002A932C /* UserCoreData.swift */; };
+		80DC95762CCCCCF8002A932C /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95752CCCCCF8002A932C /* UserRepository.swift */; };
 		F2DE44EE9B54FADA46FA5DA2 /* Pods_GithubUserTracker_GithubUserTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296A8A3AC71F48E1E427136A /* Pods_GithubUserTracker_GithubUserTrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		80DC956D2CCCBECB002A932C /* UserNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNetwork.swift; sourceTree = "<group>"; };
 		80DC95702CCCC00B002A932C /* GithubUserTracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GithubUserTracker.xcdatamodel; sourceTree = "<group>"; };
 		80DC95722CCCC150002A932C /* UserCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCoreData.swift; sourceTree = "<group>"; };
+		80DC95752CCCCCF8002A932C /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		92404DD63E7EC0724798A663 /* Pods_GithubUserTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubUserTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7EF4CF6369037251B065FA /* Pods-GithubUserTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUserTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubUserTrackerTests/Pods-GithubUserTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB2164702C0D47535E835ECF /* Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubUserTracker-GithubUserTrackerUITests/Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 		80DC95612CCCB1BC002A932C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				80DC95742CCCCCE8002A932C /* New Group */,
 				80DC95642CCCB1C7002A932C /* Network */,
 				80DC95632CCCB1C3002A932C /* CoreData */,
 				80DC95622CCCB1BF002A932C /* Repository */,
@@ -219,6 +222,7 @@
 		80DC95622CCCB1BF002A932C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				80DC95752CCCCCF8002A932C /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -239,6 +243,13 @@
 				80DC956D2CCCBECB002A932C /* UserNetwork.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		80DC95742CCCCCE8002A932C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		D81B00B26DD54E85F3D3A7B6 /* Frameworks */ = {
@@ -514,6 +525,7 @@
 				80DC95572CCCA649002A932C /* UserListItem.swift in Sources */,
 				80DC95712CCCC00B002A932C /* GithubUserTracker.xcdatamodeld in Sources */,
 				80DC95662CCCB3A4002A932C /* UserSession.swift in Sources */,
+				80DC95762CCCCCF8002A932C /* UserRepository.swift in Sources */,
 				80DC95592CCCA718002A932C /* NetworkError.swift in Sources */,
 				80DC95732CCCC150002A932C /* UserCoreData.swift in Sources */,
 				80DC955B2CCCA8BF002A932C /* CoreDataError.swift in Sources */,

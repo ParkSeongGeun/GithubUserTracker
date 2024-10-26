@@ -7,6 +7,10 @@
 
 import Foundation
 
+public protocol UserNetworkProtocol {
+    func fetchUser(query: String, page: Int) async -> Result<UserListResult, NetworkError>
+}
+
 final public class UserNetwork {
     private let manager: NetworkManagerProtocol
     
@@ -14,7 +18,7 @@ final public class UserNetwork {
         self.manager = manager
     }
     
-    func fetchUsers(query: String, page: Int) async -> Result<UserListResult, NetworkError> {
+    public func fetchUser(query: String, page: Int) async -> Result<UserListResult, NetworkError> {
         let url = "https://api.github.com/search/users?q=\(query)&page=\(page)"
         return await manager.fetchData(url: url, method: .get, parameters: nil)
     }
