@@ -23,6 +23,9 @@
 		80DC955B2CCCA8BF002A932C /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC955A2CCCA8BF002A932C /* CoreDataError.swift */; };
 		80DC955D2CCCAF1C002A932C /* UserListUsecaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC955C2CCCAF1C002A932C /* UserListUsecaseProtocol.swift */; };
 		80DC95602CCCB096002A932C /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC955F2CCCB096002A932C /* UserRepositoryProtocol.swift */; };
+		80DC95662CCCB3A4002A932C /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95652CCCB3A4002A932C /* UserSession.swift */; };
+		80DC95682CCCB53B002A932C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95672CCCB53B002A932C /* NetworkManager.swift */; };
+		80DC956A2CCCBA03002A932C /* Secrets.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 80DC95692CCCBA03002A932C /* Secrets.xcconfig */; };
 		F2DE44EE9B54FADA46FA5DA2 /* Pods_GithubUserTracker_GithubUserTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 296A8A3AC71F48E1E427136A /* Pods_GithubUserTracker_GithubUserTrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		80DC955A2CCCA8BF002A932C /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
 		80DC955C2CCCAF1C002A932C /* UserListUsecaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListUsecaseProtocol.swift; sourceTree = "<group>"; };
 		80DC955F2CCCB096002A932C /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		80DC95652CCCB3A4002A932C /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		80DC95672CCCB53B002A932C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		80DC95692CCCBA03002A932C /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
 		92404DD63E7EC0724798A663 /* Pods_GithubUserTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubUserTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE7EF4CF6369037251B065FA /* Pods-GithubUserTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUserTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-GithubUserTrackerTests/Pods-GithubUserTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CB2164702C0D47535E835ECF /* Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-GithubUserTracker-GithubUserTrackerUITests/Pods-GithubUserTracker-GithubUserTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,15 +132,16 @@
 		80DC95412CCBDAAD002A932C /* GithubUserTracker */ = {
 			isa = PBXGroup;
 			children = (
-				80DC95612CCCB1BC002A932C /* Data */,
 				80DC95382CCBDAAD002A932C /* AppDelegate.swift */,
 				80DC953F2CCBDAAD002A932C /* SceneDelegate.swift */,
 				80DC95402CCBDAAD002A932C /* ViewController.swift */,
 				80DC95512CCCA615002A932C /* Domain */,
+				80DC95612CCCB1BC002A932C /* Data */,
 				80DC953E2CCBDAAD002A932C /* Main.storyboard */,
 				80DC953C2CCBDAAD002A932C /* LaunchScreen.storyboard */,
 				80DC95392CCBDAAD002A932C /* Assets.xcassets */,
 				80DC953A2CCBDAAD002A932C /* Info.plist */,
+				80DC95692CCCBA03002A932C /* Secrets.xcconfig */,
 			);
 			path = GithubUserTracker;
 			sourceTree = "<group>";
@@ -219,6 +226,8 @@
 		80DC95642CCCB1C7002A932C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				80DC95652CCCB3A4002A932C /* UserSession.swift */,
+				80DC95672CCCB53B002A932C /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -243,7 +252,6 @@
 				BE7EF4CF6369037251B065FA /* Pods-GithubUserTrackerTests.debug.xcconfig */,
 				2E993BA106CCDA7B425F5959 /* Pods-GithubUserTrackerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -332,6 +340,7 @@
 				};
 			};
 			buildConfigurationList = 80DC94FF2CCBDA9F002A932C /* Build configuration list for PBXProject "GithubUserTracker" */;
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -355,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80DC956A2CCCBA03002A932C /* Secrets.xcconfig in Resources */,
 				80DC95452CCBDAAD002A932C /* Assets.xcassets in Resources */,
 				80DC95472CCBDAAD002A932C /* LaunchScreen.storyboard in Resources */,
 				80DC95482CCBDAAD002A932C /* Main.storyboard in Resources */,
@@ -487,10 +497,12 @@
 			files = (
 				80DC95602CCCB096002A932C /* UserRepositoryProtocol.swift in Sources */,
 				80DC95422CCBDAAD002A932C /* AppDelegate.swift in Sources */,
+				80DC95682CCCB53B002A932C /* NetworkManager.swift in Sources */,
 				80DC95432CCBDAAD002A932C /* SceneDelegate.swift in Sources */,
 				80DC955D2CCCAF1C002A932C /* UserListUsecaseProtocol.swift in Sources */,
 				80DC95442CCBDAAD002A932C /* ViewController.swift in Sources */,
 				80DC95572CCCA649002A932C /* UserListItem.swift in Sources */,
+				80DC95662CCCB3A4002A932C /* UserSession.swift in Sources */,
 				80DC95592CCCA718002A932C /* NetworkError.swift in Sources */,
 				80DC955B2CCCA8BF002A932C /* CoreDataError.swift in Sources */,
 			);
@@ -618,6 +630,7 @@
 		};
 		80DC95302CCBDAA1002A932C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80DC95692CCCBA03002A932C /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -681,6 +694,7 @@
 		};
 		80DC95312CCBDAA1002A932C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80DC95692CCCBA03002A932C /* Secrets.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;

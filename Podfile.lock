@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.9.1)
+  - Alamofire (5.10.1)
   - Kingfisher (8.1.0)
   - RxCocoa (6.8.0):
     - RxRelay (= 6.8.0)
@@ -26,7 +26,7 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  Alamofire: 840d2a1ad82355b536ec6ba5f97e5bfa54600ca3
   Kingfisher: dfbf20b6249ed4ef6f18d6a96c847bce860bdb95
   RxCocoa: 2d33c1e1e5d66492052ad46b11024ae287572880
   RxRelay: 335c78b926a2aea8d863a6d25f1ed3b5ad8e8705
