@@ -11,10 +11,9 @@
 		7DC6CB0BCD5524DEDA4DE63F /* Pods_GithubUserTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED721FF5D07290912C29EB16 /* Pods_GithubUserTracker.framework */; };
 		80DC95422CCBDAAD002A932C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95382CCBDAAD002A932C /* AppDelegate.swift */; };
 		80DC95432CCBDAAD002A932C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC953F2CCBDAAD002A932C /* SceneDelegate.swift */; };
-		80DC95442CCBDAAD002A932C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95402CCBDAAD002A932C /* ViewController.swift */; };
+		80DC95442CCBDAAD002A932C /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95402CCBDAAD002A932C /* UserListViewController.swift */; };
 		80DC95452CCBDAAD002A932C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80DC95392CCBDAAD002A932C /* Assets.xcassets */; };
 		80DC95472CCBDAAD002A932C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DC953C2CCBDAAD002A932C /* LaunchScreen.storyboard */; };
-		80DC95482CCBDAAD002A932C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80DC953E2CCBDAAD002A932C /* Main.storyboard */; };
 		80DC954B2CCBDAAF002A932C /* GithubUserTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC95492CCBDAAF002A932C /* GithubUserTrackerTests.swift */; };
 		80DC954F2CCBDAB1002A932C /* GithubUserTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC954C2CCBDAB1002A932C /* GithubUserTrackerUITests.swift */; };
 		80DC95502CCBDAB1002A932C /* GithubUserTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80DC954D2CCBDAB1002A932C /* GithubUserTrackerUITestsLaunchTests.swift */; };
@@ -64,9 +63,8 @@
 		80DC95392CCBDAAD002A932C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80DC953A2CCBDAAD002A932C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80DC953B2CCBDAAD002A932C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		80DC953D2CCBDAAD002A932C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80DC953F2CCBDAAD002A932C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		80DC95402CCBDAAD002A932C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80DC95402CCBDAAD002A932C /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		80DC95492CCBDAAF002A932C /* GithubUserTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserTrackerTests.swift; sourceTree = "<group>"; };
 		80DC954C2CCBDAB1002A932C /* GithubUserTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserTrackerUITests.swift; sourceTree = "<group>"; };
 		80DC954D2CCBDAB1002A932C /* GithubUserTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubUserTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 				80DC957A2CCCD492002A932C /* Presentation */,
 				80DC95512CCCA615002A932C /* Domain */,
 				80DC95612CCCB1BC002A932C /* Data */,
-				80DC953E2CCBDAAD002A932C /* Main.storyboard */,
 				80DC953C2CCBDAAD002A932C /* LaunchScreen.storyboard */,
 				80DC95392CCBDAAD002A932C /* Assets.xcassets */,
 				80DC953A2CCBDAAD002A932C /* Info.plist */,
@@ -268,7 +265,7 @@
 		80DC957A2CCCD492002A932C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				80DC95402CCBDAAD002A932C /* ViewController.swift */,
+				80DC957E2CCD0CCE002A932C /* ViewController */,
 				80DC957B2CCCD499002A932C /* ViewModel */,
 			);
 			path = Presentation;
@@ -280,6 +277,14 @@
 				80DC957C2CCCD4A4002A932C /* UserListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		80DC957E2CCD0CCE002A932C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				80DC95402CCBDAAD002A932C /* UserListViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		D81B00B26DD54E85F3D3A7B6 /* Frameworks */ = {
@@ -417,7 +422,6 @@
 				80DC956A2CCCBA03002A932C /* Secrets.xcconfig in Resources */,
 				80DC95452CCBDAAD002A932C /* Assets.xcassets in Resources */,
 				80DC95472CCBDAAD002A932C /* LaunchScreen.storyboard in Resources */,
-				80DC95482CCBDAAD002A932C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,7 +555,7 @@
 				80DC95432CCBDAAD002A932C /* SceneDelegate.swift in Sources */,
 				80DC957D2CCCD4A4002A932C /* UserListViewModel.swift in Sources */,
 				80DC955D2CCCAF1C002A932C /* UserListUsecaseProtocol.swift in Sources */,
-				80DC95442CCBDAAD002A932C /* ViewController.swift in Sources */,
+				80DC95442CCBDAAD002A932C /* UserListViewController.swift in Sources */,
 				80DC956E2CCCBECB002A932C /* UserNetwork.swift in Sources */,
 				80DC95572CCCA649002A932C /* UserListItem.swift in Sources */,
 				80DC95712CCCC00B002A932C /* GithubUserTracker.xcdatamodeld in Sources */,
@@ -605,14 +609,6 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		80DC953E2CCBDAAD002A932C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				80DC953D2CCBDAAD002A932C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -629,7 +625,6 @@
 				INFOPLIST_FILE = GithubUserTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
@@ -663,7 +658,6 @@
 				INFOPLIST_FILE = GithubUserTracker/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
