@@ -9,8 +9,8 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-protocol UserListViewModelProtocol {
-    
+public protocol UserListViewModelProtocol {
+    func transform(input: UserListViewModel.Input) -> UserListViewModel.Output
 }
 
 public final class UserListViewModel: UserListViewModelProtocol {
@@ -180,9 +180,9 @@ public final class UserListViewModel: UserListViewModelProtocol {
     }
 }
 
-public enum TabButtonType {
-    case api
-    case favorite
+public enum TabButtonType: String {
+    case api = "API"
+    case favorite = "Favorite"
 }
 
 public enum UserListCellData {
