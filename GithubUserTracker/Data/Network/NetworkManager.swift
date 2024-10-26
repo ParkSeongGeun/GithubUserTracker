@@ -16,7 +16,7 @@ public protocol NetworkManagerProtocol {
     ) async -> Result<T, NetworkError>
 }
 
-public class NetworkManager {
+public class NetworkManager: NetworkManagerProtocol {
     private let session: SessionProtocol
     private let decoder = JSONDecoder()
     
@@ -31,7 +31,7 @@ public class NetworkManager {
         return HTTPHeaders([tokenHeader])
     }()
     
-    func fetchData<T: Decodable>(
+    public func fetchData<T: Decodable>(
         url: String,
         method: HTTPMethod,
         parameters: Parameters?
