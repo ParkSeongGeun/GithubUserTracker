@@ -40,8 +40,8 @@ public final class UserListViewModel: UserListViewModelProtocol {
     }
     
     public func transform(input: Input) -> Output {
+        // TODO: 검색어 변경시 user Fetch and get favorite Users
         input.query.bind { [weak self] query in
-            // TODO: 검색어 변경시 user Fetch and get favorite Users
             guard let self = self, validateQuery(query: query) else {
                 self?.getFavoriteUsers(query: query)
                 return
@@ -51,30 +51,30 @@ public final class UserListViewModel: UserListViewModelProtocol {
             getFavoriteUsers(query: query)
         }.disposed(by: disposeBag)
 
+        // TODO: 즐겨찾기 추가
         input.saveFavorite
             .withLatestFrom(input.query, resultSelector: { users, query in
             return (users, query)
             })
             .bind { [weak self] user, query in
-            // TODO: 즐겨찾기 추가
-            self?.saveFavoriteUser(user: user, query: query)
-        }.disposed(by: disposeBag)
+                self?.saveFavoriteUser(user: user, query: query)
+            }.disposed(by: disposeBag)
         
+        // TODO: 즐겨찾기 삭제
         input.deleteFavorite
             .withLatestFrom(input.query, resultSelector: { ($0, $1)} )
             .bind { [weak self] userID, query in
-            // TODO: 즐겨찾기 삭제
                 self?.deleteFavoriteUser(userID: userID, query: query)
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
         
+        // TODO: 다음 페이지 검색
         input.fetchMore
             .withLatestFrom(input.query)
             .bind { [weak self] query in
                 guard let self = self else { return }
                 page += 1
                 fetchUser(query: query, page: page)
-            // TODO: 다음 페이지 검색
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
         
         // TODO: 탭 유저리스트, 즐겨찾기 리스트
         let cellData: Observable<[UserListCellData]> = Observable.combineLatest(
@@ -86,8 +86,7 @@ public final class UserListViewModel: UserListViewModelProtocol {
             var cellData: [UserListCellData] = []
             guard let self = self else { return cellData }
             
-            // TODO: cellData 생성
-            // Tab 타입에 따라 fetchUser List // favoriteUser List
+            // TODO: Tab 타입에 따라 fetchUser List // favoriteUser List
             switch tabButtonType {
             case .api:
                 let tuple = usecase.checkFavoriteState(fetchUsers: fetchUserList, favoriteUsers: allFavoriteUserList)
