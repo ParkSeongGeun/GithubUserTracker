@@ -39,7 +39,6 @@ public class NetworkManager: NetworkManagerProtocol {
         guard let url = URL(string: url) else {
             return .failure(.urlError)
         }
-        
         let result = await session.request(
             url,
             method: method,
