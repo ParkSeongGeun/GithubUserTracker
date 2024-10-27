@@ -78,7 +78,12 @@ class UserListViewController: UIViewController {
     }
 
     private func bindView() {
-        
+        tableView.rx.prefetchRows.bind { [weak self] indexPath in
+            guard let rows = self?.tableView.numberOfRows(inSection: 0), let itemIndex = indexPath.first?.item else { return }
+            if itemIndex >= rows - 1 {
+                self?.fetchMore.accept(())
+            }
+        }.disposed(by: disposeBag)
     }
     
     private func bindViewModel() {
