@@ -24,6 +24,12 @@ public struct UserListResult: Decodable {
         self.incompleteResults = try container.decode(Bool.self, forKey: .incompleteResults)
         self.items = try container.decode([UserListItem].self, forKey: .items)
     }
+    
+    public init(totalCount: Int, incompleteResults: Bool, items: [UserListItem]) {
+        self.totalCount = totalCount
+        self.incompleteResults = incompleteResults
+        self.items = items
+    }
 }
 
 public struct UserListItem: Decodable, Hashable {
